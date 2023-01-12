@@ -76,9 +76,11 @@
 \section{Uvod}
 \begin{frame}{Uvod}
 \begin{itemize}
-	\item Naloga: Zlepiti krpe oziroma ploskve tako, da bo imel zlepek geometrijsko zveznost reda 1. 	\item Podano: robne krivulje. Dobiti želimo notranje kontrolne točke.
-	\item Vemo: $G^1 \rightarrow$ zveznost enotskih tangent
-	\item Ko združujemo dve krpi tukaj nastane problem - twist compatibility problem
+	\item Naloga: Zlepiti krpe oziroma ploskve tako, da bo imel zlepek geometrijsko zveznost reda 1. 
+	\item Uporaba: pri geometrijskem modeliranju in v računalniški 	grafiki
+	
+	\item Vemo: $G^1 \leftrightarrow$ zveznost enotskih tangent
+	\item Ko združujemo dve krpi, nastane problem - twist compatibility problem
 	\pause
 	\begin{figure}[h]
 		\centering
@@ -86,7 +88,8 @@
 		%\caption{Mešani odvodi}
 	\end{figure}
 	
-	\item Rešitev: Uporabimo racionalne funkcije, ki mešane odvode primerno zrdužijo. To nas pripelje do metode Chiyokura in Kimura
+	\item Rešitev: Uporabimo racionalne funkcije, ki mešane odvode primerno zrdužijo.
+	\item Podano: robne krivulje. Dobiti želimo notranje kontrolne točke. Potrebovali bomo tudi podatke iz tangentne ravnine na robu.
 
 	
 \end{itemize}
@@ -158,7 +161,7 @@
 
 Konstrukcija
 \begin{itemize}
-	\item Želimo parametrizirati ploskev v prostoru, da bo imela $G^1$ zveznost, ko jo bomo zlepili.
+	%\item Želimo parametrizirati ploskev v prostoru, da bo imela $G^1$ zveznost, ko jo bomo zlepili.
 	\item Domena $[0,1] \times [0,1]$
 	\item Podane imamo $4$ robne krivulje: Bézierjeve krivulje reda $3$
 	\item Na vsakem robu uporabimo metodo Chiyokura in Kimura (dobimo $2 \cdot 4 = 8$ točk)
@@ -183,13 +186,13 @@ Konstrukcija
 \begin{frame}{Trikotne Gregoryjeve krpe}
 	\begin{itemize}
 		\item Trikotna domena
-		\item 3 kubične bézierjeve krivulje na robu
+		\item 3 kubične Bézierjeve krivulje na robu
 		\item Uporabimo metodo Chiyokura in Kimura (dobimo $2 \cdot 3 = 6$ točk).
 		\item Na posameznem paru uporabimo racionalno funkcijo, da dobimo 3 notranje točke.
 		\item Kubična bézierjeva krpa ima le eno kontrolno točko, ki ni robna, kvadratna pa ima 3, kar nam v tem primeru bolj ustreza. Zato moramo še robnim krivuljam zvišati stopnjo.
 		\item Posamezen par združimo v eno točko:
 		\begin{align*}
-		\tbf{b}_{211} (u, v) &= \frac{(1-w)v \tbf{b}_{211,uv}+(1-v)w\tbf{b}_{211,v_1}}{(1-w)v+(1-v)w} \\
+		\tbf{b}_{211} (u, v) &= \frac{(1-w)v \tbf{b}_{211,uv}+(1-v)w\tbf{b}_{211,uw}}{(1-w)v+(1-v)w} \\
 		\tbf{b}_{121} (u, v) &= \frac{(1-w)u \tbf{b}_{121,uv}+(1-u)w\tbf{b}_{121,vw}}{(1-w)u+(1-u)w} \\
 		\tbf{b}_{112} (u, v) &= \frac{(1-u)v \tbf{b}_{112,vw}+(1-v)u\tbf{b}_{112,uw}}{(1-u)v+(1-v)u} 
 		\end{align*}
