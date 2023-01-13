@@ -21,6 +21,10 @@
 }
 
 
+\usepackage{subfig}
+\usepackage{graphicx}
+\graphicspath{{./slike/}}
+
 
 \title{Gregoryjeve krpe\\
 \Large seminarska naloga}
@@ -59,19 +63,20 @@ Fakulteta za matematiko in fiziko\\
 
 
 \section{Uvod}
-presdtavitev problema
+%presdtavitev problema
+Za začetek najprej predstavimo problem. Krpe oziroma ploskve v prostoru želimo zlepiti tako, da bo vzdolž skupnega roba dosežena geometrijska zveznost reda 1. To bomo lahko dosegli lokalno. Zaradi lokalne $G^1$ zveznosti se Gregoryjeve krpe uporablja pri geometrijskem modeliranju in v računalniški grafiki. S predavanj vemo, da nam $G^1$ zveznost zagotavlja zveznost enotskih tangent, kar v našem primeru pomeni, da se morata tangentni ravnini ene in druge krpe ujemati.
 
-\begin{itemize}
-	\item želimo G1 geometrijsko zveznost (dosežemo jo lokalno) -- vemo, da moramo imeti tako zveznost enotskih tangentnih zato bomo potrebovali tudi odvode
-	\item vzdolž skupne meje dveh krp 
-	\item ko združujemo dve krpi nastane problem--twist compatibility problem: pri polinomskih konstrukcijah se mešana odvoda ujemata medtek ko v racionalnem primeru se ne.
-	\item Rešitev:uporabimo racionalne funkcije, ki odvode primerno združijo
-	\item tista slika odvodov(Fig1)
-	
-	
-\end{itemize}
+Ko združujemo dve krpi, naletimo na problem. Reče se mu twist compatibility problem ali tudi vertex inconsistency problem in sicer ni nujno, da bodo mešani odvodi enaki.
+Kot vemo se pri polinomski konstrukciji mešani odvodi ujemajo, v primeru Gregoryjevih krp pa niti ni treba, da se (glej sliko \ref{fig:mesani odvodi}). To je tudi ena izmed prednosti. Pokaže se pri računanju notranjih kontrolnih točk, kjer bo posamezna točka postala racionalna funkcija, zato bo ploskev sama po sebi racionalna.
 
-Preden se lotimo gregorijevih krp moramo omeniti metodo CK
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=7cm]{mesani_odvodi_ob.jpg}
+	\caption{Levo: mešani odvodi v primeru Gregoryjeve krpe; Desno: mešani odvodi pri polinomski konstrukciji}
+	\label{fig:mesani odvodi}
+\end{figure}
+
+Podane bomo imeli robne krivulje, ki bodo kar bezierjeve krivulje stopnje $3$. Računali bomo notranje kontrolne točke. Pri tem bomo potrebovali tudi podatke s tangentne ravnine na robu, da bomo lahko zagotovili $G^1$ zveznost. To nas pripelje do metode Chiyokura in Kimura. 
 
 
 \section{metoda Chiyokura in Kimura}
@@ -83,16 +88,21 @@ Preden se lotimo gregorijevih krp moramo omeniti metodo CK
 
 
 \section{Gregorijeve krpe}
+
+
 \begin{itemize}
 	\item Z gregoryjevimi krpami posplošimo gregorijeve ideje za tenzorski produkt bezierjevih krp(mogoče se tuki kej dodaš)
 	\item skonstruirati želimo ploskev, ki bo imela geometrjsko zv reda 1 ko jo bomo zlepili še z drugimi ploskvami
 	\item podane imamo le robne krivulje
+	\item povej tudi da jih lahko delamo nad večkotniki ampak da sva se medve ukvarjali le s trikotnimi in 4kotnimi.
 \end{itemize}
+
+Poglejmo si kontrukciji štirikotne in trikotne Gregoryjeve krpe.
 
 \subsection{Kvadratne Gregoryjeve krpe}
 
 \begin{itemize}
-	\item $u,v \in [0,1] \times [0,1]$
+	\item  Domena $u,v \in [0,1] \times [0,1]$
 	\item Imamo štiri kubične bezierjeve krivulje, vsaka bredstavlja rob gregorijeve krpe.
 	\item na vsakem robu nato uporabimo metodo Chiyokura in Kimura: na vsakem robu dobimo 2 točki, torej skupaj $8$. tako zagotovimo G1 zveznost.
 	\item tukaj nastopi twist compatibility problem-točke se ne ujemajo
@@ -103,10 +113,10 @@ Preden se lotimo gregorijevih krp moramo omeniti metodo CK
 \end{itemize}
 
 \begin{align*}
-\textbf{b}_{11} &=  \frac{v \textbf{b}_{11,u_0}+u\tbf{b}_{11,v_0}}{u +v} \\
-\tbf{b}_{21} &= \frac{(1-v) \tbf{b}_{21,u_0}+u\tbf{b}_{21,v_1}}{(1-v)+u} \\
-\tbf{b}_{12} &= \frac{v \tbf{b}_{12,u_1}+(1-u)\tbf{b}_{12,v_0}}{v+(1-u)} \\
-\tbf{b}_{22} &= \frac{(1-v) \tbf{b}_{22,u_1}+(1-u)\tbf{b}_{22,v_1}}{(1-u)+(1-v)} 
+\textbf{b}_{11(u,v)} &=  \frac{v \textbf{b}_{11,u_0}+u\tbf{b}_{11,v_0}}{u +v} \\
+\tbf{b}_{21}(u,v) &= \frac{(1-v) \tbf{b}_{21,u_0}+u\tbf{b}_{21,v_1}}{(1-v)+u} \\
+\tbf{b}_{12}(u,v) &= \frac{v \tbf{b}_{12,u_1}+(1-u)\tbf{b}_{12,v_0}}{v+(1-u)} \\
+\tbf{b}_{22}(u,v) &= \frac{(1-v) \tbf{b}_{22,u_1}+(1-u)\tbf{b}_{22,v_1}}{(1-u)+(1-v)} 
 \end{align*}	
 
 \subsection{Trikotne Gregoryjeve krpe}
