@@ -105,6 +105,21 @@ for i = (1 : length(u))
     end
 end
 
+bx(1, 1) = Bx(1, 1);
+bx(1, end) = Bx(1, end);
+bx(end, 1) = Bx(end, 1);
+bx(end, end) = Bx(end, end);
+
+by(1, 1) = By(1, 1);
+by(1, end) = By(1, end);
+by(end, 1) = By(end, 1);
+by(end, end) = By(end, end);
+
+bz(1, 1) = Bz(1, 1);
+bz(1, end) = Bz(1, end);
+bz(end, 1) = Bz(end, 1);
+bz(end, end) = Bz(end, end);
+
 hold on
 axis equal
 surf(bx,by,bz)
@@ -211,6 +226,22 @@ for i = (1 : length(u))
         bz(j, i) = z;
     end
 end
+
+
+bx(1, 1) = Bx(1, 1);
+bx(1, end) = Bx(1, end);
+bx(end, 1) = Bx(end, 1);
+bx(end, end) = Bx(end, end);
+
+by(1, 1) = By(1, 1);
+by(1, end) = By(1, end);
+by(end, 1) = By(end, 1);
+by(end, end) = By(end, end);
+
+bz(1, 1) = Bz(1, 1);
+bz(1, end) = Bz(1, end);
+bz(end, 1) = Bz(end, 1);
+bz(end, end) = Bz(end, end);
 
 hold on
 surf(bx,by,bz)
@@ -322,6 +353,21 @@ for i = (1 : length(u))
         bz(j, i) = z;
     end
 end
+
+bx(1, 1) = Bx(1, 1);
+bx(1, end) = Bx(1, end);
+bx(end, 1) = Bx(end, 1);
+bx(end, end) = Bx(end, end);
+
+by(1, 1) = By(1, 1);
+by(1, end) = By(1, end);
+by(end, 1) = By(end, 1);
+by(end, end) = By(end, end);
+
+bz(1, 1) = Bz(1, 1);
+bz(1, end) = Bz(1, end);
+bz(end, 1) = Bz(end, 1);
+bz(end, end) = Bz(end, end);
 
 hold on
 surf(bx,by,bz)
