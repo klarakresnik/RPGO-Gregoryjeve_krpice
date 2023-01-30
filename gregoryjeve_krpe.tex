@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,regno]{article}
 \usepackage[slovene]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -7,7 +7,12 @@
 \usepackage{lmodern}
 \usepackage{amsfonts}
 \usepackage{amsthm}
-\pagestyle{empty}
+\usepackage{float}
+\usepackage{}
+
+%\pagestyle{fancy}
+%\fancyhf{}
+
 
 % Definicija okolij izrek, posledica
 {\theoremstyle{plain}
@@ -231,52 +236,47 @@ Argumenti o singularnosti so enaki kot prej. Kubična Beziejeva krpa ima le eno 
 
 
 \section{Zaključek}
-Za konec si poglejmo nekaj primerov. V matlabu sva za osnovo vzeli kocko in na stranicah implementirali $G^1$ zveznost. Glej sliko ??. Na sliki se vidijo tudi točke $\tbf{b}_{11}(u,v),
+Za konec si poglejmo nekaj primerov. Za prvi primer  sva za osnovo vzeli kocko in nato v matlabu na stranicah implementirali $G^1$ zveznost. Dobljeno telo prikazuje slika \ref{fig:g_kocka}. Na sliki se vidijo tudi točke $\tbf{b}_{11}(u,v),
 \tbf{b}_{21}(u,v), \tbf{b}_{12}(u,v), \tbf{b}_{22}(u,v)$, ki jih dobimo pri različnih parametrih $u$ in $v$.
-
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{gregory_kocka.jpg}
+	\caption{Primer Gregoryjeve ideje na kockastem telesu}
+	\label{fig:g_kocka}
+\end{figure}
 
 % posebna kocka
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=10cm]{posebna_kocka.jpg}
+	\includegraphics[width=9cm]{posebna_kocka.jpg}
+	\caption{Posebna kocka}
 \end{figure}
-
 
 % človeček
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=11cm]{koncni_primer.png}
+	\caption{Zahtevnejša struktura-človek}
+	\label{človek}
 \end{figure}
 
+Kot smo že omenili se Gregoryjeve krpe uporabljajo v računalniški grafiki.
+Zgoraj sta prikazana še posebna kocka in pa bolj zapletena figura.
+Na sliki \ref{človek} je osnovno telo pokrito iz samih štirikotnikov. Na vsakem izmed njih skonstruiramo kvadratno Gregoryjevo krpo. Čisto na desni so nato z displacement map dodane še podrobnosti.
+
 \begin{thebibliography}{99}
-	% to so primeri,kasneje jih pobriši
+
+%	\bibitem{referenca-clanek}
+%	I.~Priimek, \emph{Naslov članka}, okrajšano ime revije \textbf{letnik revije} (leto izida) strani od--do.
 	
-	\bibitem{osnovni-clanek}
-	R.~Akhtar, T.~Jackson-Henderson, R.~Karpman, M.~Boggess, I.~Jimenez, A.~Kinzel, D.~Pritikin, \emph{On the unitary Cayley graph of a finite ring}, Electron.\ J. Combin.\ \textbf{16} (2009), no. 1,\ Research Paper 117,\ 13 pp.
+	\bibitem{osnovni clanek}
+	G.~J.~Hettinga, J.~Kosinka: \emph{Multisided generalisations of Gregory patches},
+	Computer Aided Geometric Design, \textbf{62}, (2018), 166–180.
 	
-	\bibitem{koncen_produkt}
-	M.~F.~Atiyah, I.~G.~MacDonald. \emph{Introduction to Commutative Algebra}, Addison-Wesley-Longman, 1969
-	
-	%I.~Priimek, \emph{Naslov knjige}, morebitni naslov zbirke  \textbf{zaporedna številka}, založba, kraj, leto izdaje.
-	
-	\bibitem{tenzorji}
-	K.~Schäcke, \emph{On the Kronecker product}, 2013
-	
-	\bibitem{vir_10}
-	M.~E.~Watkins, \emph{Connectivity of transitive graphs}, J.~Combin.\ Theory \textbf{8} (1970), 23-29.
-	
-	\bibitem{vir_11}
-	D.~B.~West. \emph{Graph Theory}, Second Edition.\ Prentice-Hall, (2000).
+	\bibitem{dodaten clanek}
+	C.~Loop, S.~Schaefer, T.~Ni, I.~Castaño, \emph{Approximating Subdivision Surfaces with Gregory Patches for Hardware Tessellation}, ACM Trans. Graph., \textbf{12}, (2009)
 	
 \end{thebibliography}
-
-
-
-
-
-
-
-
 
 
 
