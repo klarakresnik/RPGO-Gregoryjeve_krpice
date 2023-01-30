@@ -32,7 +32,7 @@
 
 
 \title{Gregoryjeve krpe\\
-\Large seminarska naloga pri predmetu RPGO}
+\Large Seminarska naloga pri predmetu RPGO}
 
 \date{}
 \author{Klara Kresnik in Meta Trdin\\
@@ -63,7 +63,7 @@ Fakulteta za matematiko in fiziko\\
 % še kera fakulteta
 %predmet seminar
 %drugi letnik
-\pagebreak
+% \pagebreak
 
 
 
@@ -81,7 +81,7 @@ Kot vemo se pri polinomski konstrukciji mešani odvodi ujemajo, v primeru Gregor
 	\label{fig:mesani odvodi}
 \end{figure}
 
-Podane bomo imeli robne krivulje, ki bodo kar bezierjeve krivulje stopnje $3$. Računali 
+Podane bomo imeli robne krivulje, ki bodo kar Bézierjeve krivulje stopnje $3$. Računali 
 bomo notranje kontrolne točke. Pri tem bomo potrebovali tudi podatke s tangentne ravnine 
 na robu, da bomo lahko zagotovili $G^1$ zveznost. To nas pripelje do metode Chiyokura in 
 Kimura. 
@@ -150,7 +150,7 @@ Kimura.
 			\tbf{a}_3 &= k_1\tbf{b}_3 + h_1\tbf{c}_2 \\
 		\end{split}
 	\end{equation*},
-	kjer so $k_0, k_1, h_0, h_1 \in \mathbb{R}$. Sledi, da sta iskani fuknciji
+	kjer so $k_0, k_1, h_0, h_1 \in \mathbb{R}$. Sledi, da sta iskani funkciji
 	\begin{equation*}
 		\begin{split}
 			k(u) &= (1 - u) k_0 + u k_1 \\
@@ -190,14 +190,14 @@ Kimura.
 
 
 \section{Gregoryjeve krpe}
-Z Gregoryjevimi krpami posplošimo Gregoryjeve ideje za tenzorski produkt bezierjevih krp.
-Skonstruirati želimo ploskev, ki bo imela na robu geometrjsko zveznost reda $1$, ko jo bomo zlepili še z drugimi ploskvami, pri tem pa bomo imeli podane le robne krivulje. V nadaljevanju bomo obravnavali trikotne in štirikotne ploskve. Gregoryjeve krpe delamo tudi nad večkotniki višje stopnje, vendar se pri nas s tem ne bomo ukvarjali.
+Z Gregoryjevimi krpami posplošimo Gregoryjeve ideje za tenzorski produkt Bézierjevih krp.
+Konstruirati želimo ploskev, ki bo imela na robu geometrijsko zveznost reda $1$, ko jo bomo zlepili z drugimi ploskvami, pri tem pa bomo imeli podane le robne krivulje. V nadaljevanju bomo obravnavali trikotne in štirikotne ploskve. Gregoryjeve krpe delamo tudi nad večkotniki višje stopnje, vendar se s tem ne bomo ukvarjali.
 
 Poglejmo si kontrukciji štirikotne in trikotne Gregoryjeve krpe.
 
 
 \subsection{Kvadratne Gregoryjeve krpe}
-Imamo štiri kubične Bezierjeve krivulje, kjer vsaka predstavlja rob Gregoryjeve krpe. Na vsakem robu uporabimo metodo Chiyokura in Kimura in tako pridelamo po $2$ točki. Tako zagotovimo $G^1$ zveznost. Tukaj nastopi twist compatibility problem in sicer dobljene točke ne sovpadajo, kot prikazuje slika \ref{fig:kvadratna}.
+Imamo štiri kubične Bézierjeve krivulje, kjer vsaka predstavlja rob Gregoryjeve krpe. Na vsakem robu uporabimo metodo Chiyokura in Kimura in tako pridelamo po $2$ točki. Tako zagotovimo $G^1$ zveznost. Tukaj nastopi twist compatibility problem in sicer dobljene točke ne sovpadajo, kot prikazuje slika \ref{fig:kvadratna}.
 
 \begin{figure}[h]
 	\centering
@@ -217,7 +217,7 @@ Na tem mestu si pomagamo z racionalnimi funkcijami. Točke $\tbf{b}_{11}, \tbf{b
 	
 
 \subsection{Trikotne Gregoryjeve krpe}
-Kot že ime pove imamo pri trikotnih Gregoryjevih krpah trikotno domeno, tako da uporabljamo baricentrične koordinate. Imamo $3$ kubične Bezierjeve krivulje na robu, mi pa želimo dobiti notranje kontrolne točke za našo ploskev. Enako kot prej najprej po metodi Chiyokura in Kimura pridelamo po $2$ točki z vsake stranice.
+Kot že ime pove imamo pri trikotnih Gregoryjevih krpah trikotno domeno, tako da uporabljamo baricentrične koordinate. Imamo $3$ kubične Bézierjeve krivulje na robu, mi pa želimo dobiti notranje kontrolne točke za našo ploskev. Enako kot prej, po metodi Chiyokura in Kimura pridelamo po $2$ točki z vsake stranice.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=10cm]{gregory_krpe_trikotna.jpg}
@@ -225,7 +225,7 @@ Kot že ime pove imamo pri trikotnih Gregoryjevih krpah trikotno domeno, tako da
 	\label{fig:trikotna}
 \end{figure}
 
-Podobno kot prej spet opazimo, da se te točke ne ujemajo in tako definiramo racionalne funkcije, ki bodo predstavljale kontrolne točke:
+Spet opazimo, da se točke ne ujemajo in tako definiramo racionalne funkcije, ki bodo predstavljale kontrolne točke:
 \begin{align*}
 \tbf{b}_{211}(u,v,w) &= \frac{(1-w)v \tbf{b}_{211,uv}+(1-v)w\tbf{b}_{211,v_1}}{(1-w)v+(1-v)w} \\
 \tbf{b}_{121}(u,v,w) &= \frac{(1-w)u \tbf{b}_{121,uv}+(1-u)v\tbf{b}_{121,vw}}{(1-w)u+(1-u)w} \\
@@ -236,7 +236,7 @@ Argumenti o singularnosti so enaki kot prej. Kubična Beziejeva krpa ima le eno 
 
 
 \section{Zaključek}
-Za konec si poglejmo nekaj primerov. Za prvi primer  sva za osnovo vzeli kocko in nato v matlabu na stranicah implementirali $G^1$ zveznost. Dobljeno telo prikazuje slika \ref{fig:g_kocka}. Na sliki se vidijo tudi točke $\tbf{b}_{11}(u,v),
+Za konec si poglejmo nekaj primerov. Za prvi primer  sva za osnovo vzeli kocko in nato v programu Matlab na stranicah implementirali $G^1$ zveznost. Dobljeno telo prikazuje slika \ref{fig:g_kocka}. Na sliki se vidijo tudi točke $\tbf{b}_{11}(u,v),
 \tbf{b}_{21}(u,v), \tbf{b}_{12}(u,v), \tbf{b}_{22}(u,v)$, ki jih dobimo pri različnih parametrih $u$ in $v$.
 \begin{figure}[h]
 	\centering
@@ -256,7 +256,7 @@ Za konec si poglejmo nekaj primerov. Za prvi primer  sva za osnovo vzeli kocko i
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=11cm]{koncni_primer.png}
-	\caption{Zahtevnejša struktura-človek}
+	\caption{Zahtevnejša struktura - človek}
 	\label{človek}
 \end{figure}
 
