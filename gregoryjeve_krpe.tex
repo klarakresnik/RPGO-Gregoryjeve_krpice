@@ -185,54 +185,54 @@ Kimura.
 
 
 \section{Gregoryjeve krpe}
-
-
-\begin{itemize}
-	\item Z gregoryjevimi krpami posplošimo gregoryjeve ideje za tenzorski produkt bezierjevih krp(mogoče se tuki kej dodaš)
-	\item skonstruirati želimo ploskev, ki bo imela geometrjsko zv reda 1 ko jo bomo zlepili še z drugimi ploskvami
-	\item podane imamo le robne krivulje
-	\item povej tudi da jih lahko delamo nad večkotniki ampak da sva se medve ukvarjali le s trikotnimi in 4kotnimi.
-\end{itemize}
+Z Gregoryjevimi krpami posplošimo Gregoryjeve ideje za tenzorski produkt bezierjevih krp.
+Skonstruirati želimo ploskev, ki bo imela na robu geometrjsko zveznost reda $1$, ko jo bomo zlepili še z drugimi ploskvami, pri tem pa bomo imeli podane le robne krivulje. V nadaljevanju bomo obravnavali trikotne in štirikotne ploskve. Gregoryjeve krpe delamo tudi nad večkotniki višje stopnje, vendar se pri nas s tem ne bomo ukvarjali.
 
 Poglejmo si kontrukciji štirikotne in trikotne Gregoryjeve krpe.
 
+
 \subsection{Kvadratne Gregoryjeve krpe}
+Imamo štiri kubične Bezierjeve krivulje, kjer vsaka predstavlja rob Gregoryjeve krpe. Na vsakem robu uporabimo metodo Chiyokura in Kimura in tako pridelamo po $2$ točki. Tako zagotovimo $G^1$ zveznost. Tukaj nastopi twist compatibility problem in sicer dobljene točke ne sovpadajo, kot prikazuje slika \ref{fig:kvadratna}.
 
-\begin{itemize}
-	\item  Domena $u,v \in [0,1] \times [0,1]$
-	\item Imamo štiri kubične bezierjeve krivulje, vsaka bredstavlja rob gregorijeve krpe.
-	\item na vsakem robu nato uporabimo metodo Chiyokura in Kimura: na vsakem robu dobimo 2 točki, torej skupaj $8$. tako zagotovimo G1 zveznost.
-	\item tukaj nastopi twist compatibility problem-točke se ne ujemajo
-	\item zato bomo uporabili racionalne funkcije (pomagali si bomo z rac funkcijami)
-	\item za vsako vozliošče ena funkcija torej 4 funkcije
-	\item formule
-	\item te funkcije so definirane tako zato, da dobimo če vstavimo $\tbf{b}_{11}(0,v) = \tbf{b}_{11,u_0}$ itd
-\end{itemize}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{gregory_krpe_kvadratna.jpg}
+	\caption{Konstrukcija kvadratne Gregoryjeve krpe}
+	\label{fig:kvadratna}
+\end{figure}
 
+Na tem mestu si pomagamo z racionalnimi funkcijami. Točke $\tbf{b}_{11}, \tbf{b}_{21}, \tbf{b}_{12}, \tbf{b}_{22}$ definiramo kot racionalne funkcije odvisne od parametrov $u$ in $v$ z intervala $[0,1]$:
 \begin{align*}
 \tbf{b}_{11}(u,v) &=  \frac{v \textbf{b}_{11,u_0}+u\tbf{b}_{11,v_0}}{u +v} \\
 \tbf{b}_{21}(u,v) &= \frac{(1-v) \tbf{b}_{21,u_0}+u\tbf{b}_{21,v_1}}{(1-v)+u} \\
 \tbf{b}_{12}(u,v) &= \frac{v \tbf{b}_{12,u_1}+(1-u)\tbf{b}_{12,v_0}}{v+(1-u)} \\
 \tbf{b}_{22}(u,v) &= \frac{(1-v) \tbf{b}_{22,u_1}+(1-u)\tbf{b}_{22,v_1}}{(1-u)+(1-v)} 
-\end{align*}	
+\end{align*}
+Če v vsako točko vstavimo določen $(u,v)$ iz roba domene dobimo ravno točke, pridobljene iz metode Chiyokura in Kimura. Opazimo, da se singularnosti v imenovalcu pojavijo le v ogljiščih domene, te pa se da obladati z analizo vrednosti v parametrih.
+	
 
 \subsection{Trikotne Gregoryjeve krpe}
-\begin{itemize}
-	\item trikotna domena
-	\item tokrat imamo 3 kubicne bezierjeve krivulje na robu
-	\item spet uporabimo metodo in dobimo 6 točk (3 pare točk)
-	\item na posameznem paru uporabim racionalno funkcijo da dobimo 3 notranje točke kvadratične bezierjeve krpe. kubična bezierjeva krpa ima le eno kontrolno točko ki ni robna, kvadratna pa ima 3 kar nam v tem primeru bolj ustreza. Zato moramo še robnim krivuljam zvišati stopnjo.
-\end{itemize}
+Kot že ime pove imamo pri trikotnih Gregoryjevih krpah trikotno domeno, tako da uporabljamo baricentrične koordinate. Imamo $3$ kubične Bezierjeve krivulje na robu, mi pa želimo dobiti notranje kontrolne točke za našo ploskev. Enako kot prej najprej po metodi Chiyokura in Kimura pridelamo po $2$ točki z vsake stranice.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{gregory_krpe_trikotna.jpg}
+	\caption{Konstrukcija trikotne Gregoryjeve krpe}
+	\label{fig:trikotna}
+\end{figure}
 
-
+Podobno kot prej spet opazimo, da se te točke ne ujemajo in tako definiramo racionalne funkcije, ki bodo predstavljale kontrolne točke:
 \begin{align*}
-\tbf{b}_{211} &= \frac{(1-w)v \tbf{b}_{211,uv}+(1-v)w\tbf{b}_{211,v_1}}{(1-w)v+(1-v)w} \\
-\tbf{b}_{121} &= \frac{(1-w)u \tbf{b}_{121,uv}+(1-u)v\tbf{b}_{121,vw}}{(1-w)u+(1-u)w} \\
-\tbf{b}_{112} &= \frac{(1-u)v \tbf{b}_{112,vw}+(1-v)u\tbf{b}_{112,uw}}{(1-u)v+(1-v)u} 
+\tbf{b}_{211}(u,v,w) &= \frac{(1-w)v \tbf{b}_{211,uv}+(1-v)w\tbf{b}_{211,v_1}}{(1-w)v+(1-v)w} \\
+\tbf{b}_{121}(u,v,w) &= \frac{(1-w)u \tbf{b}_{121,uv}+(1-u)v\tbf{b}_{121,vw}}{(1-w)u+(1-u)w} \\
+\tbf{b}_{112}(u,v,w) &= \frac{(1-u)v \tbf{b}_{112,vw}+(1-v)u\tbf{b}_{112,uw}}{(1-u)v+(1-v)u} 
 \end{align*}
 
+Argumenti o singularnosti so enaki kot prej. Kubična Beziejeva krpa ima le eno notranjo kontrolno točko, za krpo stopnje $4$ pa vemo, da jih ima $3$. V našem primeru nam zato bolj ustreza slednji primer, saj imamo definirane tri različne funkcije za te točke. Robnim krivuljam tako še zvišamo stopnjo, da dobimo mrežo za krpo stopnje $4$. Te točke so na sliki \ref{fig:trikotna} označene kot kare.
+
+
 \section{Zaključek}
-Za konec si poglejmo nekaj primerov. V matlabu sva za osnovo vzeli kocko in na stranicah implementirali $G^1$ zveznost. Glej sliko ??. Na sliki se vidijo tudi točke $\tbf{b}_{11}(u,v), \tbf{b}_{21}(u,v), \tbf{b}_{12}(u,v), \tbf{b}_{22}(u,v)$, ki jih dobimo pri različnih parametrih $u$ in $v$.
+Za konec si poglejmo nekaj primerov. V matlabu sva za osnovo vzeli kocko in na stranicah implementirali $G^1$ zveznost. Glej sliko ??. Na sliki se vidijo tudi točke $\tbf{b}_{11}(u,v),
+\tbf{b}_{21}(u,v), \tbf{b}_{12}(u,v), \tbf{b}_{22}(u,v)$, ki jih dobimo pri različnih parametrih $u$ in $v$.
 
 
 % posebna kocka
